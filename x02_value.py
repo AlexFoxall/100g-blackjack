@@ -1,20 +1,22 @@
 #!python3
+from x01_deck import *
 
-def value(hand):
-  '''
-  input:
-  list hand: hand is a list of strings that contains the cards in the hand
-  eg: ['AH','3D','4S']
+
+def value():
+  x = createDeck()
+  hand = []
   
-  return:
-  int the total value of the hand
-  may return a list if the hand contains an Ace
-  eg:
-  '''
-  
-  return None
+  for i in x:
+    hand.append(i)
 
+    print(hand)
+    d = sum(hand)
+    
+  return hand
 
+value()
+print(value)
+'''
 def main():
   assert value(['AH','3D','4S']) ==[8,18]
   assert value(['KH','TD']) == 20
@@ -23,3 +25,4 @@ def main():
 
 if __name__ == "__name__":
   main()
+'''
